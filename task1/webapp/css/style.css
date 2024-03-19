@@ -1,0 +1,12 @@
+/* Enter your custom styles here */
+.taskSimple {
+    background-color: #c1f0c1; /* Light green */
+}
+
+.taskMedium {
+    background-color: #f0e7c1; /* Light yellow */
+}
+
+.taskComplex {
+    background-color: #f0c1c1; /* Light red */
+}

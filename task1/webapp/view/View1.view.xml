@@ -1,0 +1,54 @@
+<mvc:View controllerName="com.emo.pip.task1.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="TASKS">
+        <content>
+            <Table id="taskTable" items="{ path:'/tasks', sorter:{path:'type'}}">
+                <columns>
+                    <Column>
+                        <Text text="Title"/>
+                    </Column>
+                    <Column>
+                        <Text text="Description"/>
+                    </Column>
+                    <Column>
+                        <Text text="Due Date"/>
+                    </Column>
+                    <Column>
+                        <Text text="Start Date"/>
+                    </Column>
+                    <Column>
+                        <Text text="Updated Date"/>
+                    </Column>
+                    <Column>
+                        <Text text="Effort"/>
+                    </Column>
+                    <Column>
+                        <Text text="Status"/>
+                    </Column>
+                    <Column>
+                        <Text text="Type" />
+                    </Column>
+
+                </columns>
+                <items>
+                    <ColumnListItem >
+                        <cells>
+
+                            <Text text="{title}"/>
+                            <Text text="{description}"/>
+                            <Text text="{dueDate}"/>
+                            <Text text="{startDate}"/>
+                            <Text text="{updatedDate}"/>
+                            <Text text="{effort}"/>
+
+                            <Button text="{path: 'status', formatter: '.formatTaskStatus'}" press=".onTaskButtonPress" type="Emphasized"/>
+                            <ObjectStatus text="{path: 'type'}" state="{path:'type', formatter:'.formatTaskTypeClass' }"/>
+
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
+    </Page>
+</mvc:View>
